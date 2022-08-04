@@ -1,12 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "BullCowCartridge.h"
 
-void UBullCowCartridge::BeginPlay() // When the game starts
+void UBullCowCartridge::BeginPlay()
 {
-    Super::BeginPlay();
+	Super::BeginPlay();
+	PrintLine("Welcome to Bull Cows!");
+	PrintLine("Type something and press enter please.");
 }
 
-void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
+void UBullCowCartridge::OnInput(const FString& Input)
 {
-
+	ClearScreen();
 }
