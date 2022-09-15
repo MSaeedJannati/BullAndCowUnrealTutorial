@@ -4,11 +4,13 @@
 void UBullCowCartridge::BeginPlay()
 {
 	Super::BeginPlay();
-	PrintLine("Welcome to Bull Cows!");
-	PrintLine("Type something and press enter please.");
+	PrintLine(TEXT("Welcome to Bull Cows!"));
+	PrintLine(TEXT("Type something and press enter please."));
 }
 
 void UBullCowCartridge::OnInput(const FString& Input)
 {
 	ClearScreen();
+	FString hiddenWord{TEXT("pube")};
+	PrintLine(Input);
 }
