@@ -22,14 +22,21 @@ public:
 	// Your declarations go below!
 private:
 #pragma region Fields
-FString _hiddenWord;
+	FString _hiddenWord;
+	int _lives;
+	bool _isGameOver;
 #pragma  endregion
 #pragma  region Methods
 	FString ChooseRandomWord(const std::vector<FString>& choices);
 	void PrintWelcomeMessages(const FString& hiddenWord);
-	bool CheckIfCorrectAnswer(const FString& hiddenWord,const  FString& userInput);
+	bool CheckIfCorrectAnswer(const FString& hiddenWord, const FString& userInput);
 	void OnCorrectAnswer();
 	void OnWrongAnswer();
-void InitialiseTheGame();
+	void InitialiseTheGame();
+	void PrintCurrentStat();
+	bool CheckForLose();
+	bool CheckIfGameOver(const FString& userInput);
+	bool HasCorrectLength(const FString& userInput);
+	bool IsIsogram(FString userInput);
 #pragma  endregion
 };
